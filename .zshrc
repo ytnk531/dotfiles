@@ -70,6 +70,7 @@ SPACESHIP_RPROMPT_ORDER=(
 
 # Alias
 alias zshconfig="vi ~/.zshrc"
+alias vimconfig="vi ~/.vimrc"
 alias gits="git status"
 alias awsume=". awsume"
 alias dc='docker-compose'

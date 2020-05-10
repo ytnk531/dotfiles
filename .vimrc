@@ -1,7 +1,7 @@
 let $VIMPLUG = '~/.local/share/nvim/site/autoload/plug.vim'
 
 if empty(glob($VIMPLUG))
-  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vimm --create-dirs
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
