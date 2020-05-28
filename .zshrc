@@ -30,6 +30,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=248"
 SPACESHIP_PROMPT_PREFIXES_SHOW=false
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_DOCKER_SHOW=false
 SPACESHIP_PROMPT_ORDER=(
         time          # Time stamps section
         user          # Username section
