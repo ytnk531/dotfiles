@@ -2,6 +2,7 @@ source ~/.zinit/bin/zinit.zsh
 setopt promptsubst
 
 # rbenv
+export PATH=/home/tanaka/.rbenv/bin:$PATH:/usr/lib/go-1.12/bin
 eval "$(rbenv init -)"
 
 # Block completion call to redo them at once after load all of them.
@@ -13,10 +14,11 @@ zinit snippet OMZL::completion.zsh
 zinit snippet OMZL::theme-and-appearance.zsh
 zinit snippet OMZP::git
 zinit snippet OMZP::aws
-zinit light denysdovhan/spaceship-prompt
-zinit wait lucid for \
-  zsh-users/zsh-autosuggestions \
-  lukechilds/zsh-nvm
+zinit snippet OMZT::robbyrussell
+#zinit light denysdovhan/spaceship-prompt
+#zinit wait lucid for \
+#  zsh-users/zsh-autosuggestions \
+#  lukechilds/zsh-nvm
 zinit wait lucid for \
   atinit"zicompinit; zicdreplay"  \
   zdharma/fast-syntax-highlighting \
@@ -84,3 +86,15 @@ alias tm='tmux new -Asdefault'
 alias vi='nvim'
 alias vim='nvim'
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
