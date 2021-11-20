@@ -2,8 +2,11 @@ source ~/.zinit/bin/zinit.zsh
 setopt promptsubst
 
 # rbenv
-export PATH=/home/tanaka/.rbenv/bin:$PATH:/usr/lib/go-1.12/bin
+export PATH=~/.rbenv/bin:$PATH:/usr/lib/go-1.12/bin
 eval "$(rbenv init -)"
+
+# node
+export NODE_PATH=/usr/local/lib/node_modules
 
 # Block completion call to redo them at once after load all of them.
 #zinit ice blockf
@@ -85,6 +88,7 @@ alias be='bundle exec'
 alias tm='tmux new -Asdefault'
 alias vi='nvim'
 alias vim='nvim'
+alias pf='perf script | stackcollapse-perf.pl | flamegraph.pl > flamegraph.svg'
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -98,3 +102,5 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+PATH="$HOME/.local/bin:$PATH"

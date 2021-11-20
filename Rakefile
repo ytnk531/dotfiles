@@ -1,3 +1,4 @@
+
 require 'rake'
 
 def each_dotfiles
@@ -29,3 +30,8 @@ task :install do
     link(file, dotfile_dir, backup_dir)
   end
 end
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)" 
+# bin
+# curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+# ./nvim.appimage 
+

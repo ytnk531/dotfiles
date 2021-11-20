@@ -55,3 +55,4 @@ command! EditVimrc e $MYVIMRC
 command! RunCode !run_code
 command! ToggleNumber set number!
 command! Term belowright sp +term
+command! RunRuby ! ruby %
