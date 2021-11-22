@@ -1,8 +1,10 @@
-source ~/.zinit/bin/zinit.zsh
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
+
 setopt promptsubst
 
 # rbenv
-export PATH=/home/tanaka/.rbenv/bin:$PATH:/usr/lib/go-1.12/bin
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Block completion call to redo them at once after load all of them.
@@ -21,7 +23,7 @@ zinit snippet OMZT::robbyrussell
 #  lukechilds/zsh-nvm
 zinit wait lucid for \
   atinit"zicompinit; zicdreplay"  \
-  zdharma/fast-syntax-highlighting \
+  zdharma-continuum/fast-syntax-highlighting \
   OMZP::colored-man-pages \
   as"completion" \
   OMZP::docker/_docker \
@@ -98,3 +100,4 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+### End of Zinit's installer chunk
